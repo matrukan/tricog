@@ -24,6 +24,12 @@ const io = socketIo(server, {
 app.use(cors());
 app.use(express.json());
 
+// Health check endpoint
+app.get('/health', (req, res) => {
+  res.json({ status: 'ok', service: 'node-backend' });
+});
+
+
 // Initialize OpenAI (you'll need to add OPENAI_API_KEY to your .env file)
 const openai = new OpenAI({
   apiKey: process.env.OPENAI_API_KEY || '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'
