@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 
 from .database import Base, engine, get_db
-from .models import SymptomRule
+from .model import SymptomRule
 from .schemas import SymptomRuleOut, MapRequest, MapResponse
 from .seed import seed_rules
 
