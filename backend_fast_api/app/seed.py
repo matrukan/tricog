@@ -1,5 +1,5 @@
 from sqlalchemy.orm import Session
-from .models import SymptomRule
+from .model import SymptomRule
 
 DEFAULT_RULES = [
     {
